@@ -12,6 +12,7 @@ class Product extends Model
     protected $fillable= [
         'category_id',
         'brand_id',
+        'photo_id',
         'name',
         'slug',
         'about',
@@ -38,5 +39,10 @@ class Product extends Model
     public function orderItems(): HasMany
     {
         return $this->hasMany(OrderItem::class);
+    }
+
+    public function photos(): HasMany
+    {
+    return $this->hasMany(ProductImage::class);
     }
 }

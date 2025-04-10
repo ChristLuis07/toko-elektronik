@@ -3,12 +3,17 @@
 use App\Http\Controllers\Api\AuthController;
 use App\Http\Controllers\Api\BrandController;
 use App\Http\Controllers\Api\CategoryController;
+use App\Http\Controllers\Api\HomeController;
 use App\Http\Controllers\Api\ProductController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 
 
+
+
+//home
+Route::get('/', [HomeController::class, 'index']);
 
 // Authentikasi Route
 Route::post('/login', [AuthController::class, 'login']);
